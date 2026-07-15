@@ -71,7 +71,6 @@ The final design uses:
 - **image-plane association** between projected LiDAR boxes and 2D detections;
 - **score calibration and probabilistic fusion** for matched detections;
 - class-relaxed matching and semantic relabeling for related categories;
-- per-class LiDAR thresholds and camera-supported rescue for long-tail classes.
 
 This architecture is detector-agnostic: stronger unimodal detectors can be
 adopted without retraining a joint multimodal network.
