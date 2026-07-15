@@ -205,21 +205,6 @@ Evaluate an existing result JSON without rerunning fusion:
 python main.py evaluate --result-json /path/to/results_nusc.json
 ```
 
-## Final Fusion Recipe
-
-The complete configuration is recorded in
-[`configs/final_fusion_codino_swat_stage2.yaml`](configs/final_fusion_codino_swat_stage2.yaml).
-The main settings are:
-
-- `score_2d_thresh = 0.15`
-- `default_score_3d_thresh = 0.10`
-- `match_mode = class_relaxed`
-- `mismatch_policy = relabel`
-- `unmatched_lidar_factor = 0.20`
-- `rescue_score_thresh = 0.05`
-- `rescue_min_2d_score = 0.12`
-- per-class LiDAR thresholds in [`configs/final_lidar_threshold_map.json`](configs/final_lidar_threshold_map.json)
-
 ## Citation
 
 Please also cite the upstream LT3D benchmark, Co-DINO, and the LiDAR detector
