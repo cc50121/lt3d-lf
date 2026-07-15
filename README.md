@@ -204,8 +204,3 @@ Evaluate an existing result JSON without rerunning fusion:
 ```bash
 python main.py evaluate --result-json /path/to/results_nusc.json
 ```
-
-## Citation
-
-Please also cite the upstream LT3D benchmark, Co-DINO, and the LiDAR detector
-used in your experiments.
