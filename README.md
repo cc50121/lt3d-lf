@@ -222,14 +222,5 @@ The main settings are:
 
 ## Citation
 
-```bibtex
-@article{ma2026longtailed,
-  title   = {Long-Tailed 3D Detection via Multi-Modal Late-Fusion},
-  author  = {Ma, Yechi and Peri, Neehar and Dave, Achal and Hua, Wei and Ramanan, Deva and Kong, Shu},
-  journal = {International Journal of Computer Vision},
-  year    = {2026}
-}
-```
-
 Please also cite the upstream LT3D benchmark, Co-DINO, and the LiDAR detector
 used in your experiments.
