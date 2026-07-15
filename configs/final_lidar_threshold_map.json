@@ -1,0 +1,17 @@
+{
+  "adult": 0.08,
+  "barrier": 0.08,
+  "bicycle": 0.04,
+  "bus": 0.04,
+  "car": 0.08,
+  "child": 0.08,
+  "construction_vehicle": 0.08,
+  "construction_worker": 0.04,
+  "debris": 0.15,
+  "emergency_vehicle": 0.04,
+  "pushable_pullable": 0.08,
+  "stroller": 0.08,
+  "traffic_cone": 0.12,
+  "trailer": 0.08,
+  "truck": 0.06
+}

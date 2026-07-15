@@ -1,0 +1,13 @@
+{
+  "bicycle": 0.05,
+  "child": 0.05,
+  "construction_vehicle": 0.05,
+  "construction_worker": 0.05,
+  "debris": 0.05,
+  "emergency_vehicle": 0.05,
+  "personal_mobility": 0.05,
+  "police_officer": 0.05,
+  "pushable_pullable": 0.05,
+  "stroller": 0.05,
+  "trailer": 0.05
+}

@@ -1,0 +1,45 @@
+name: codino_swat_stage2_mmlf_final
+detector:
+  camera: Co-DINO Swin-L SWAT-Stage2 nuImages
+  lidar: LiDAR detector predictions
+result:
+  mAP: 57.04
+  NDS: 62.81
+
+fusion:
+  score_2d_thresh: 0.15
+  default_score_3d_thresh: 0.10
+  score_3d_threshold_json: configs/final_lidar_threshold_map.json
+  calibration_json: path/to/current_best.json
+  unmatched_lidar_factor: 0.20
+
+matching:
+  match_mode: class_relaxed
+  iou_thresh: 0.50
+  relaxed_iou_thresh: 0.30
+  ioa_det_thresh: 0.70
+  ioa_proj_thresh: 1.10
+  use_center_inside: true
+  center_inside_score: 0.51
+  mismatch_policy: relabel
+  adult_child_relaxed: true
+  adult_child_min_2d_score: 0.12
+
+rescue:
+  rescue_score_thresh: 0.05
+  rescue_score_json: configs/final_rescue_score_map.json
+  rescue_min_2d_score: 0.12
+  rescue_min_match_score: 0.0
+  rescue_unmatched_factor: 0.0
+  classes:
+    - bicycle
+    - child
+    - construction_vehicle
+    - construction_worker
+    - debris
+    - emergency_vehicle
+    - personal_mobility
+    - police_officer
+    - pushable_pullable
+    - stroller
+    - trailer
