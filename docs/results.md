@@ -19,7 +19,7 @@ They are provided as external reproducibility artifacts:
 | `lt3d_lf_final_3d_predictions.json.gz.part003` | [download](https://drive.google.com/file/d/19Cv8Bd2XLfeXlWAbx8Pu25FMk3alM9z-/view?usp=drivesdk) | `4E84F357977BCB5FC3E739BC8AD9AA1CE7DEA8AC03FB683A706D0FD319D9D937` |
 | `lt3d_lf_camera_results.tar.gz` | [download](https://drive.google.com/file/d/1NGMGuB7detRJkiHy8hbXvok6rJ2PfLUU/view?usp=drivesdk) | `212EC21F77C2A55E61F372257127FCAB644467C1E2997D035E19C295099CB817` |
 | `lt3d_lf_evaluation_summary.tar.gz` | [download](https://drive.google.com/file/d/1Eq27aE-nJlVLYtpO5Mo0bJUip_7O6KRW/view?usp=drivesdk) | `052C5742823C5AE13549F9577640F3E841D1E6ECD36D471F5D7F8EA1BAE43E51` |
-| `lt3d_lf_qualitative_comparison_20260709.mp4` | [download](https://drive.google.com/file/d/1AMkLc06Lc34tMeUulnpMAUZGz_stlVzD/view?usp=drivesdk) | `2184296F8AF1A8612B1F95496601263D383AAA06A7ABE20815AD7D122B9236A1` |
+| `current-comparison.mp4` (CMT / CCF / MMLF) | [download](https://cc50121.github.io/lt3d-lf-io/static/videos/current-comparison.mp4) | `056FCF9539C22F5D7C0C7855F07EE4A139987AFF2965A9A17C85E10A51729FB1` |
 
 Reconstruct the final prediction JSON with:
 

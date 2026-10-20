@@ -1,6 +1,6 @@
 # Reproducing the IJCV release
 
-Paper: [arXiv v6](https://arxiv.org/pdf/2312.10986v6).
+[Paper](https://arxiv.org/pdf/2312.10986v6).
 The paper is accepted by the International Journal of Computer Vision (IJCV).
 
 ## What is released
