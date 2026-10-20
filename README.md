@@ -1,5 +1,11 @@
 # Long-Tailed 3D Detection via Multi-Modal Late-Fusion
 
+**Accepted by the International Journal of Computer Vision (IJCV).**
+
+[Paper (arXiv v6, PDF)](https://arxiv.org/pdf/2312.10986v6) |
+[Project Page](https://cc50121.github.io/lt3d-lf-io/) |
+[Reproduction Guide](docs/reproducibility.md)
+
 <div align="center">
   <p>
     <strong>Yechi Ma</strong><sup>1,†</sup> &nbsp;
@@ -117,6 +123,13 @@ long-tail improvements.
 
 ## Released Artifacts
 
+**Detector source code and weights:** download the
+[IJCV reproducibility release](https://github.com/cc50121/lt3d-lf/releases/tag/ijcv-reproducibility-v1).
+It includes CenterPoint/LT3D, Co-DINO/MMDetection, the actual LT3D evaluation
+SDK, detector checkpoints, and the cached LiDAR fusion input. See the
+[reproduction guide](docs/reproducibility.md) for checksums, model provenance,
+training/inference commands, and the remaining verification limits.
+
 Large predictions and camera detections are hosted separately:
 
 - Final 3D predictions: [part 1](https://drive.google.com/file/d/1ZHD2JIQzZpFG9cwTNrm8kUPSVUBW_z_z/view?usp=drivesdk), [part 2](https://drive.google.com/file/d/1_Wxu0Mq3L1Hjp3vd0_wedgJuVTlOrARa/view?usp=drivesdk), [part 3](https://drive.google.com/file/d/19Cv8Bd2XLfeXlWAbx8Pu25FMk3alM9z-/view?usp=drivesdk)
@@ -148,6 +161,11 @@ assets/                  Paper figures used in this README
 ```
 
 ## Environment
+
+See the [reproduction guide](docs/reproducibility.md) for detector source
+snapshots, separate 2D/3D environments, training and inference, input export,
+and the exact final score-adjustment coefficients. The legacy DINO coefficients
+in `lt3d_lf/calibration.py` are not the final Co-DINO coefficients.
 
 The code is intended to run inside an existing MMDetection3D and
 nuScenes-LT3D environment. For long-tail 18-class evaluation, clone both LT3D
@@ -182,24 +200,36 @@ Edit the paths in `scripts/run_final_fusion.sh`, then run:
 bash scripts/run_final_fusion.sh
 ```
 
-Equivalent command:
+Download and unpack the checksum-verified detector sources and weights:
 
 ```bash
-python main.py fuse \
-  --lidar-predictions /path/to/lidar_predictions.pkl \
-  --camera-results /path/to/camera_results/s015 \
-  --calibration-json /path/to/calibration.json \
-  --score-2d-threshold 0.15 \
-  --score-3d-threshold 0.10 \
-  --score-3d-threshold-json configs/final_lidar_threshold_map.json \
-  --match-mode class_relaxed \
-  --mismatch-policy relabel \
-  --rescue-score-json configs/final_rescue_score_map.json \
-  --adult-child-relaxed
+python scripts/download_release.py --extract
 ```
 
 Evaluate an existing result JSON without rerunning fusion:
 
 ```bash
-python main.py evaluate --result-json /path/to/results_nusc.json
+python main.py evaluate \
+  --framework-root /path/to/lt3d-lf/third_party/centerpoint \
+  --nuscenes-sdk /path/to/lt3d-lf/third_party/nuscenes-sdk \
+  --data-root /path/to/nuscenes \
+  --config configs/detectors/centerpoint_lt3d.py \
+  --result-json /path/to/results_nusc.json \
+  --evaluation-config detection_lt3d
+```
+
+## Citation
+
+The paper is accepted by IJCV; publisher-assigned bibliographic details will
+be added when available. Until then, the versioned preprint is:
+
+```bibtex
+@article{ma2023longtailed,
+  title={Long-Tailed 3D Detection via Multi-Modal Fusion},
+  author={Ma, Yechi and Peri, Neehar and Dave, Achal and Hua, Wei and Ramanan, Deva and Kong, Shu},
+  journal={arXiv preprint arXiv:2312.10986},
+  year={2023},
+  note={Version 6, 2026. Accepted by International Journal of Computer Vision (IJCV)},
+  url={https://arxiv.org/pdf/2312.10986v6}
+}
 ```

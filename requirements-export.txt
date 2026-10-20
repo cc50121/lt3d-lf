@@ -1,0 +1,2 @@
+# Only needed when exporting a detector's large COCO prediction JSON.
+ijson>=3.2,<4

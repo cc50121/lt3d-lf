@@ -1,0 +1,24 @@
+{
+  "detector": "Co-DINO SWAT-Stage2 nuImages",
+  "candidate": "040_barrier_up120",
+  "coefficients": {
+    "adult": 0.1,
+    "barrier": 0.216,
+    "bicycle": 0.72,
+    "bus": 0.7,
+    "car": 0.17,
+    "child": 1.512,
+    "construction_vehicle": 0.5,
+    "construction_worker": 1.152,
+    "debris": 0.52416,
+    "emergency_vehicle": 1.672,
+    "motorcycle": 0.4,
+    "personal_mobility": 1.672,
+    "police_officer": 1.856,
+    "pushable_pullable": 1.56,
+    "stroller": 1.35,
+    "traffic_cone": 0.36,
+    "trailer": 0.44,
+    "truck": 0.4
+  }
+}

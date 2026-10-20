@@ -10,7 +10,7 @@ fusion:
   score_2d_thresh: 0.15
   default_score_3d_thresh: 0.10
   score_3d_threshold_json: configs/final_lidar_threshold_map.json
-  calibration_json: path/to/current_best.json
+  calibration_json: configs/final_codino_calibration.json
   unmatched_lidar_factor: 0.20
 
 matching:

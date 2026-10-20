@@ -2,7 +2,7 @@
 set -euo pipefail
 
 # Edit these paths for your machine.
-ROOT=${ROOT:-/path/to/lt3d-lf}
+ROOT=${ROOT:-$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)}
 FRAMEWORK_ROOT=${FRAMEWORK_ROOT:-/path/to/mmdet3d-lt3d}
 NUSCENES_SDK=${NUSCENES_SDK:-/path/to/nuscenes-lt3d/python-sdk}
 DATA_ROOT=${DATA_ROOT:-/path/to/nuscenes}
@@ -10,15 +10,17 @@ PYTHON=${PYTHON:-python}
 
 LIDAR_PREDICTIONS=${LIDAR_PREDICTIONS:-/path/to/lidar_predictions.pkl}
 CAMERA_RESULTS=${CAMERA_RESULTS:-/path/to/camera_results/s015}
-CALIBRATION_JSON=${CALIBRATION_JSON:-/path/to/current_best.json}
+CALIBRATION_JSON=${CALIBRATION_JSON:-${ROOT}/configs/final_codino_calibration.json}
 OUTPUT_DIR=${OUTPUT_DIR:-${ROOT}/results/codino_swat_stage2_mmlf_final}
 
 cd "${ROOT}"
+export PYTHONPATH="${NUSCENES_SDK}:${FRAMEWORK_ROOT}:${ROOT}"
 
 "${PYTHON}" main.py fuse \
   --framework-root "${FRAMEWORK_ROOT}" \
   --nuscenes-sdk "${NUSCENES_SDK}" \
   --data-root "${DATA_ROOT}" \
+  --config "${ROOT}/configs/detectors/centerpoint_lt3d.py" \
   --lidar-predictions "${LIDAR_PREDICTIONS}" \
   --camera-results "${CAMERA_RESULTS}" \
   --output-dir "${OUTPUT_DIR}" \

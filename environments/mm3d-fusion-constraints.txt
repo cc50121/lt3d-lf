@@ -1,0 +1,9 @@
+# Legacy CPU-fusion installation, Python 3.7. Not an Ampere GPU inference recipe.
+torch==1.7.0
+torchvision==0.8.0
+mmcv-full==1.6.0
+mmdet==2.25.3
+numpy==1.19.5
+opencv-python==4.5.5.64
+lap==0.4.0
+nuscenes-devkit==1.1.9

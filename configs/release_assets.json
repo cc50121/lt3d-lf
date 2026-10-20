@@ -1,0 +1,84 @@
+{
+  "release": "https://github.com/cc50121/lt3d-lf/releases/tag/ijcv-reproducibility-v1",
+  "assets": [
+    {
+      "name": "centerpoint-lt3d-source.tar.gz",
+      "kind": "source",
+      "size_bytes": 522254,
+      "sha256": "492121c5c52090fd95ddebbbee6305c275d24ddfccc98ae3d0e4591b820b4c87",
+      "url": "https://github.com/cc50121/lt3d-lf/releases/download/ijcv-reproducibility-v1/centerpoint-lt3d-source.tar.gz",
+      "extract_to": "centerpoint"
+    },
+    {
+      "name": "centerpoint_epoch19.pth",
+      "kind": "checkpoint",
+      "size_bytes": 110557747,
+      "sha256": "1a8a3ee81deee6223ca02cfed22adec7ba6b5c01d53cf9e1513f844a6ef0d807",
+      "url": "https://github.com/cc50121/lt3d-lf/releases/download/ijcv-reproducibility-v1/centerpoint_epoch19.pth"
+    },
+    {
+      "name": "centerpoint_fusion_input.pkl",
+      "kind": "predictions",
+      "size_bytes": 96760208,
+      "sha256": "b7739faff4bd10c1b650e42504e9435154ddab32b7448462f27b2d924da6fa64",
+      "url": "https://github.com/cc50121/lt3d-lf/releases/download/ijcv-reproducibility-v1/centerpoint_fusion_input.pkl"
+    },
+    {
+      "name": "codino-mmdetection-source-clean.tar.gz",
+      "kind": "source",
+      "size_bytes": 1015779,
+      "sha256": "885c136c1e4684cdf9c412a7b6c12e16f7d1a4311e67fc207d9268e52b53f212",
+      "url": "https://github.com/cc50121/lt3d-lf/releases/download/ijcv-reproducibility-v1/codino-mmdetection-source-clean.tar.gz",
+      "extract_to": "mmdetection"
+    },
+    {
+      "name": "codino_swinl_swat_nuimages_epoch1.pth.part001",
+      "kind": "checkpoint_part",
+      "size_bytes": 268435456,
+      "sha256": "1f149dff17660a966490e26e317774cb98bb93aa939077d752ffdafb1ae93957",
+      "url": "https://github.com/cc50121/lt3d-lf/releases/download/ijcv-reproducibility-v1/codino_swinl_swat_nuimages_epoch1.pth.part001"
+    },
+    {
+      "name": "codino_swinl_swat_nuimages_epoch1.pth.part002",
+      "kind": "checkpoint_part",
+      "size_bytes": 268435456,
+      "sha256": "ff0a1b2c48698f0c6d03d5090804b0a7049ecbe12ace3c5d5b0fe194ae9bf19a",
+      "url": "https://github.com/cc50121/lt3d-lf/releases/download/ijcv-reproducibility-v1/codino_swinl_swat_nuimages_epoch1.pth.part002"
+    },
+    {
+      "name": "codino_swinl_swat_nuimages_epoch1.pth.part003",
+      "kind": "checkpoint_part",
+      "size_bytes": 268435456,
+      "sha256": "5fad8f6443e98b554b4b0786b7afe6191e506caef0a12a6a29e0546382a7dc85",
+      "url": "https://github.com/cc50121/lt3d-lf/releases/download/ijcv-reproducibility-v1/codino_swinl_swat_nuimages_epoch1.pth.part003"
+    },
+    {
+      "name": "codino_swinl_swat_nuimages_epoch1.pth.part004",
+      "kind": "checkpoint_part",
+      "size_bytes": 145611488,
+      "sha256": "5f0d311d9af22a8917da45bdd2c726aa3754a2fa1decb2e67c82b00f1a8c943e",
+      "url": "https://github.com/cc50121/lt3d-lf/releases/download/ijcv-reproducibility-v1/codino_swinl_swat_nuimages_epoch1.pth.part004"
+    },
+    {
+      "name": "nuscenes-lt3d-sdk-source.tar.gz",
+      "kind": "source",
+      "size_bytes": 228132,
+      "sha256": "87acbcb775ad920b8af2390b0509b68d638e475138ea3901d4840d2da2e958f8",
+      "url": "https://github.com/cc50121/lt3d-lf/releases/download/ijcv-reproducibility-v1/nuscenes-lt3d-sdk-source.tar.gz",
+      "extract_to": "nuscenes-sdk"
+    }
+  ],
+  "assembled": [
+    {
+      "name": "codino_swinl_swat_nuimages_epoch1.pth",
+      "size_bytes": 950917856,
+      "sha256": "380d4a98d33566a5787ba4f2eb83520b2e3a6f5da03d1cf06e1ede392b0cad82",
+      "parts": [
+        "codino_swinl_swat_nuimages_epoch1.pth.part001",
+        "codino_swinl_swat_nuimages_epoch1.pth.part002",
+        "codino_swinl_swat_nuimages_epoch1.pth.part003",
+        "codino_swinl_swat_nuimages_epoch1.pth.part004"
+      ]
+    }
+  ]
+}

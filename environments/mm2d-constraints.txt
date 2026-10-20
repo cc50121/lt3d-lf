@@ -1,0 +1,7 @@
+# Observed critical versions; Python 3.8 and a CUDA-compatible build are required.
+torch==2.4.1
+torchvision==0.19.1
+mmcv==2.2.0
+mmengine==0.10.7
+numpy==1.24.4
+opencv-python==4.10.0.84

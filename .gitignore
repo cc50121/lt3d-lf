@@ -1,6 +1,7 @@
 __pycache__/
 *.py[cod]
 .venv/
+data/
 results/
 work_dirs/
 checkpoints/
@@ -13,3 +14,7 @@ checkpoints/
 *.tar.gz
 *.zip
 *.jsonl.tmp
+downloads/
+third_party/centerpoint/
+third_party/mmdetection/
+third_party/nuscenes-sdk/
