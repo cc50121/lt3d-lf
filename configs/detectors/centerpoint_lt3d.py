@@ -38,7 +38,7 @@ grid_size = [int((abs(point_cloud_range[0]) + abs(point_cloud_range[3])) / voxel
 file_client_args = dict(backend='disk')
 class_names = [
     'car', 'truck', 'trailer', 'bus', 'construction_vehicle', 'bicycle', 'motorcycle', 'emergency_vehicle',
-    'adult', 'child', 'police_officer', 'construction_worker', 'stroller', 'personal_mobility', 
+    'adult', 'child', 'police_officer', 'construction_worker', 'stroller', 'personal_mobility',
     'pushable_pullable', 'debris', 'traffic_cone', 'barrier'
 ]
 # class_names = ['vehicle', 'pedestrian', 'movable']
@@ -49,33 +49,33 @@ total_class_names = class_names + ["vehicle", "pedestrian", "movable", "object"]
 
 task_names = {
              "standard": ['car', 'truck', 'trailer', 'bus', 'construction_vehicle', 'bicycle', 'motorcycle', 'emergency_vehicle',
-                            'adult', 'child', 'police_officer', 'construction_worker', 'stroller', 'personal_mobility', 
+                            'adult', 'child', 'police_officer', 'construction_worker', 'stroller', 'personal_mobility',
                             'pushable_pullable', 'debris', 'traffic_cone', 'barrier'],
               "group": ["vehicle", "pedestrian", "movable"],
               "all" : ["object"]
              }
 
 class_mapping = {
-                 "standard": [['car'], ['truck'], ['trailer'], ['bus'], ['construction_vehicle'], ['bicycle'], ['motorcycle'], ['emergency_vehicle'], 
-                                ['adult'], ['child'], ['police_officer'], ['construction_worker'], ['stroller'], ['personal_mobility'], 
+                 "standard": [['car'], ['truck'], ['trailer'], ['bus'], ['construction_vehicle'], ['bicycle'], ['motorcycle'], ['emergency_vehicle'],
+                                ['adult'], ['child'], ['police_officer'], ['construction_worker'], ['stroller'], ['personal_mobility'],
                                 ['pushable_pullable'], ['debris'], ['traffic_cone'], ['barrier']],
-                 "group" : [['car', 'truck', 'trailer', 'bus', 'construction_vehicle', 'bicycle', 'motorcycle', 'emergency_vehicle'], 
-                            ['adult', 'child', 'police_officer', 'construction_worker', 'stroller', 'personal_mobility'], 
+                 "group" : [['car', 'truck', 'trailer', 'bus', 'construction_vehicle', 'bicycle', 'motorcycle', 'emergency_vehicle'],
+                            ['adult', 'child', 'police_officer', 'construction_worker', 'stroller', 'personal_mobility'],
                             ['pushable_pullable', 'debris', 'traffic_cone', 'barrier']],
                  "all" : [['car', 'truck', 'trailer', 'bus', 'construction_vehicle', 'bicycle', 'motorcycle', 'emergency_vehicle',
-                            'adult', 'child', 'police_officer', 'construction_worker', 'stroller', 'personal_mobility', 
+                            'adult', 'child', 'police_officer', 'construction_worker', 'stroller', 'personal_mobility',
                             'pushable_pullable', 'debris', 'traffic_cone', 'barrier']]
                  }
-nms = ["W", "W", "W", "W", "W", "W", "W", "W", "W", "W", 
+nms = ["W", "W", "W", "W", "W", "W", "W", "W", "W", "W",
        "W", "W", "W", "W", "W", "W", "W", "W", "X", "X", "X", "X"]
-#nms = ["A", "A", "A", "A", "A", "A", "A", "A", "A", "A", 
+#nms = ["A", "A", "A", "A", "A", "A", "A", "A", "A", "A",
 #       "A", "A", "A", "A", "A", "A", "A", "A", "X", "X", "X", "X"]
 # nms = ["W", "W", "W", "W"]
 
 # nms = ["W", "W", "W"]
 
-hierarchical_softmax = [['car', 'vehicle', 'object'], ['truck', 'vehicle', 'object'], ['trailer', 'vehicle', 'object'], ['bus', 'vehicle', 'object'], ['construction_vehicle', 'vehicle', 'object'], ['bicycle', 'vehicle', 'object'], ['motorcycle', 'vehicle', 'object'], ['emergency_vehicle', 'vehicle', 'object'], 
-                        ['adult', 'pedestrian', 'object'], ['child', 'pedestrian', 'object'], ['police_officer', 'pedestrian', 'object'], ['construction_worker', 'pedestrian', 'object'], ['stroller', 'pedestrian', 'object'], ['personal_mobility', 'pedestrian', 'object'], 
+hierarchical_softmax = [['car', 'vehicle', 'object'], ['truck', 'vehicle', 'object'], ['trailer', 'vehicle', 'object'], ['bus', 'vehicle', 'object'], ['construction_vehicle', 'vehicle', 'object'], ['bicycle', 'vehicle', 'object'], ['motorcycle', 'vehicle', 'object'], ['emergency_vehicle', 'vehicle', 'object'],
+                        ['adult', 'pedestrian', 'object'], ['child', 'pedestrian', 'object'], ['police_officer', 'pedestrian', 'object'], ['construction_worker', 'pedestrian', 'object'], ['stroller', 'pedestrian', 'object'], ['personal_mobility', 'pedestrian', 'object'],
                         ['pushable_pullable', 'movable', 'object'], ['debris', 'movable', 'object'], ['traffic_cone', 'movable', 'object'], ['barrier', 'movable', 'object'],
                         ["vehicle"], ["pedestrian"], ["movable"], ["object"]]
 hierarchical_softmax = []
@@ -183,7 +183,7 @@ db_sampler = dict(
 data_root=data_root,
 info_path=os.path.join(info_root, 'nuscenes_dbinfos_train.pkl'),
 rate=1.0,
-sampler_type=sampler_type, 
+sampler_type=sampler_type,
 task_names=task_names,
 class_mapping=class_mapping,
 prepare=dict(
@@ -398,7 +398,7 @@ else:
         sampler_type=sampler_type,
         task_names=task_names,
         class_mapping=class_mapping),
-    
+
 data = dict(
     samples_per_gpu=4,
     workers_per_gpu=4,
